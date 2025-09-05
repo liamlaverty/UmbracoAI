@@ -266,6 +266,13 @@
         "--headless=",
         "--viewport-size="
       ]
+    },
+      "a11y-accessibility": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "a11y-mcp-server"
+      ]
     }
   }
 }
