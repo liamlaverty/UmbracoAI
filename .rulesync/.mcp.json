@@ -251,6 +251,10 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-puppeteer"
+      ],
+      "alwaysAllow": [
+        "puppeteer_navigate",
+        "puppeteer_evaluate"
       ]
     },
     "playwright": {
