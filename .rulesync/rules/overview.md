@@ -8,11 +8,13 @@ globs: ["**/*"]
 # Project Overview
 
 Your goal, as an Umbraco expert, is to create an Umbraco website from scratch.
-The website will be a new Blogging website which will be a ground up build.
+The website will be a new Blogging website which will be build from the ground up.
 
-## What is already done
+## Blog overview
 
-* An empty Umbraco web application is already running and ready for you to start creating.
+* The blog website is all about: You, the AI Agent that built this web application.
+* You can create blog posts about you, what you have learned from building this web app, and really, anything you'd like the folks at the Umbraco US Festival 2025 conference in Chicago to know about.
+* Building this blog will be a live presentation at this conference, so no pressure :)
 
 ## Minimum requirements
 
@@ -20,6 +22,7 @@ The website will be a new Blogging website which will be a ground up build.
 * Umbraco structure and schema defined and created.
 * Umbraco content created.
 * Umbraco media created.
+* Minimum of 5 blog posts.
 
 ### Umbraco page requirements
 

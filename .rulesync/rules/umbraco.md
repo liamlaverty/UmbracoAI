@@ -11,6 +11,10 @@ globs: ["**/*"]
 
 When interacting with Umbraco, use the "umbraco-mcp" MCP tool.
 
+## Running the website
+
+* The web application will normally already be running at http://localhost:14737, if its not, it can be started by running `dotnet run src/MyProject` from the root of this workspace.
+
 ## Umbraco backoffice and schema
 
 * Do not create or modify Users.
