@@ -11,7 +11,8 @@ Page design should be consistent between all pages.
 
 ## Umbraco Templates
 
-* Html, Razor and Template authoring should be done with the Umbraco Template MCP tools.
+* When creating Umbraco Templates, this must be done via the Umbraco Template MCP tools.
+* After Umbraco Templates have been created, modifying the cshtml file content directly via the file system is acceptable.
 
 ## Partial Views
 
