@@ -13,3 +13,7 @@ targets: ["*"]
 ## Razor
 
 * Since page navigation is a shared component, a razor partial view can be used which is stored under src/MyProject/Views/Partials
+
+## Testing
+
+* Once the navigation has been created or updated, test that it renders correctly using the 'puppeteer' MCP tool.

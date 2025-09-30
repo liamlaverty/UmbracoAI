@@ -7,4 +7,6 @@ globs: ["**/*"]
 
 # Rules for using tools
 
+## Puppeteer
+
 * Do not take screenshots to determine a page rendering error, you will need to read or evaluate the HTML content.
