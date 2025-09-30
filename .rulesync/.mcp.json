@@ -260,27 +260,14 @@
         "git_status"
       ]
     },
-    "puppeteer": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-puppeteer"
-      ],
-      "alwaysAllow": [
-        "puppeteer_navigate",
-        "puppeteer_evaluate"
-      ]
-    },
     "playwright": {
       "command": "npx",
       "args": [
         "-y",
         "@playwright/mcp@latest",
-        "--browser=msedge",
-        "--headless=",
         "--viewport-size="
       ]
-    },
+     },
       "a11y-accessibility": {
       "command": "npx",
       "args": [

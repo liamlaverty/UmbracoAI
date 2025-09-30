@@ -16,4 +16,4 @@ targets: ["*"]
 
 ## Testing
 
-* Once the navigation has been created or updated, test that it renders correctly using the 'puppeteer' MCP tool.
+* Once the navigation has been created or updated, test that it renders correctly using the 'Playwright' MCP tool.
