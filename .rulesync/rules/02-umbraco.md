@@ -52,3 +52,7 @@ Defines the minimal Document Types that will need to be created with Templates:
     * Image header
     * Tags
     * etc...
+
+## Additiona libraries/plugins
+
+DO NOT install additional libraries, plugins or extensions, they are not necessary.

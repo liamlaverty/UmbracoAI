@@ -13,6 +13,7 @@ Page design should be consistent between all pages.
 
 * When creating Umbraco Templates, this must be done via the Umbraco Template MCP tools.
 * After Umbraco Templates have been created, modifying the cshtml file content directly via the file system is acceptable.
+* Rendering Umbraco content in the cshtml files does NOT require additional plugins. Even for markdown editors, etc... Umbraco has all of the functionality built in to render this correctly using the standard syntax: `@Model.Value("propertyName")`
 
 ## Partial Views
 
