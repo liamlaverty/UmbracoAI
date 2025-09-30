@@ -250,7 +250,9 @@
       "alwaysAllow": [
         "browser_navigate",
         "browser_evaluate",
-        "browser_close"
+        "browser_close",
+        "browser_take_screenshot",
+        "browser_click"
       ]
      },
       "a11y-accessibility": {
