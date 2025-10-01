@@ -1,11 +1,15 @@
 ---
-root: true
+root: false
 targets: ["*"]
 description: "Rules for using MCP tools"
 globs: ["**/*"]
 ---
 
 # Rules for using MCP tools
+
+## Common Rules
+
+* If a task/command asks to use a specific MCP tool and the tool fails, DO NOT try to use an alternative.
 
 ## Umbraco MCP
 

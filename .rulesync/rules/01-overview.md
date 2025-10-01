@@ -17,10 +17,3 @@ The website will be a new Blogging website which will be build from the ground u
 * Umbraco content created.
 * Umbraco media created.
 * Minimum of 5 blog posts.
-
-## Bonus requirements
-
-If the minimal requirements are acheived, you can try to implement:
-
-* Search landing page to process searching based on a term in a query string and display the results.
-* Tags landing page showing all posts by Tag.

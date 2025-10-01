@@ -252,7 +252,8 @@
         "browser_evaluate",
         "browser_close",
         "browser_take_screenshot",
-        "browser_click"
+        "browser_click",
+        "browser_network_requests"
       ]
      },
       "a11y-accessibility": {
@@ -260,6 +261,22 @@
       "args": [
         "-y",
         "a11y-mcp-server"
+      ],
+      "alwaysAllow": [
+        "test_accessibility",
+        "test_html_string",
+        "get_rules",
+        "check_color_contrast",
+        "check_aria_attributes",
+        "check_orientation_lock"
+      ]
+    },
+    "lighthouse": {
+      "command": "npx",
+      "args": ["lighthouse-mcp"],
+      "alwaysAllow": [
+        "run_audit",
+        "get_performance_score"
       ]
     }
   }

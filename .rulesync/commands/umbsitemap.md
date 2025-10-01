@@ -16,3 +16,7 @@ targets: ["*"]
 * Crawl each link in the site map and validate that it doesn't produce any errors by using the 'Playwright' MCP tool to browse to the absolute URL of the published document and ensure there are no errors.
 * If there are errors, there will be a 'div' element with an id of 'stackpage'.
 * If there is an error, read what the error is that is rendered on the page and fix it in the Template.
+
+## Validate navigation
+
+* Each URL listed in the sitemap should be accessible through navigation on the website.
