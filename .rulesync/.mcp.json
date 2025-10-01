@@ -270,14 +270,6 @@
         "check_aria_attributes",
         "check_orientation_lock"
       ]
-    },
-    "lighthouse": {
-      "command": "npx",
-      "args": ["lighthouse-mcp"],
-      "alwaysAllow": [
-        "run_audit",
-        "get_performance_score"
-      ]
     }
   }
 }
