@@ -19,6 +19,7 @@ globs: ["**/*"]
 - Create comprehensive, scalable solutions that can grow with the project needs
 - Always consider SEO, performance, and user experience in your implementations
 - Be creative with your front-end design, html and css. Come up with a theme and stick to it.
+- DO NOT try to log into the Umbraco backoffice manually with the browser.
 
 ## Running the website
 
