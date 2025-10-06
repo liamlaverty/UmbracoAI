@@ -19,6 +19,10 @@ In this demo, the premise is to have an AI Agent automatically create an Umbraco
 
 ![Demo](Step01.gif)
 
+👇👇👇👇👇👇
+
+![alt text](image-2.png)
+
 ## Using this repo
 
 ### VSCode
