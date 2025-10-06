@@ -270,6 +270,15 @@
         "check_aria_attributes",
         "check_orientation_lock"
       ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "alwaysAllow": [
+        "fetch"
+      ]
     }
   }
 }
