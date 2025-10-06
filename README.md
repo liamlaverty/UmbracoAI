@@ -39,7 +39,7 @@ For this demo, other cmd line tools have been auto-allowed:
 1. The tool is already installed in this workspace MCP settings file: /.rulesync/.mcp.json
 1. Read and configure Umbraco MCP: https://github.com/umbraco/Umbraco-CMS-MCP-Dev including the user information.
 1. Edit /.rulesync/.mcp.json to update your Umbraco settings.
-1. NOTE: ALL Umbraco MCP commands are marked as 'always allow'.
+1. NOTE: ALL Umbraco MCP commands are marked as 'always allow', however there is this filter applied to the MCP server: "UMBRACO_INCLUDE_TOOL_COLLECTIONS": "document-type,document,media,property-type,partial-view,static-file,stylesheet,temporary-file,imaging,template".
 
 ### Rulesync
 
