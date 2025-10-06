@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@umbraco-mcp/umbraco-mcp-cms": "file:../../Umbraco/UmbracoMCP/umbraco-mcp-umbraco-mcp-cms-0.1.0-alpha.7.tgz",
-    "lighthouse": "^12.8.2"
-  }
-}
