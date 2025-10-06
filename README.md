@@ -8,6 +8,15 @@ This project was put together as a presentation for the Umbraco US Festival 2025
 
 In this demo, the premise is to have an AI Agent automatically create an Umbraco Blogging website from scratch.
 
+## Quick Start
+
+`TLDR;`
+
+1. The Umbraco website needs to be running/installed: `dotnet run --project src/MyProject/MyProject.csproj`
+1. Ensure Umbraco MCP config is correct in the file: `/.rulesync/.mcp.json`
+1. Run Rulesync: `npx rulesync generate --targets "*" --features "*"`
+1. Run a slash command like: `/01-umbhomepage`
+
 ## Using this repo
 
 ### VSCode
@@ -22,10 +31,11 @@ For this demo, other cmd line tools have been auto-allowed:
 
 ![alt text](image.png)
 
-### Umbraco MCP
+### Umbraco website & Umbraco MCP
 
+1. The Umbraco website will need to be run/installed first: `dotnet run --project src/MyProject/MyProject.csproj`
 1. The tool is already installed in this workspace MCP settings file: /.rulesync/.mcp.json
-1. Read and configure Umbraco MCP: https://github.com/umbraco/Umbraco-CMS-MCP-Dev.
+1. Read and configure Umbraco MCP: https://github.com/umbraco/Umbraco-CMS-MCP-Dev including the user information.
 1. Edit /.rulesync/.mcp.json to update your Umbraco settings.
 1. NOTE: ALL Umbraco MCP commands are marked as 'always allow'.
 
