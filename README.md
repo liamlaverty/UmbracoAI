@@ -17,6 +17,8 @@ In this demo, the premise is to have an AI Agent automatically create an Umbraco
 1. Run Rulesync: `npx rulesync generate --targets "*" --features "*"`
 1. Run a slash command like: `/01-umbhomepage`
 
+![Demo](Step01.gif)
+
 ## Using this repo
 
 ### VSCode
