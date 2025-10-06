@@ -10,6 +10,10 @@ In this demo, the premise is to have an AI Agent automatically create an Umbraco
 
 ## Using this repo
 
+### VSCode
+
+All coding and interaction that was done with this repo was done with VSCode and Roo Code. Using VS and/or other AI tools like Claude might work, but I've never tested these scenarios.
+
 ### "YOLO mode"
 
 Part of the presentation was to showcase that an AI Agent can autonomously do all of the work without user interaction once the rules and commands are setup. As such, several MCP tools are pre-installed in the file /.rulesync/.mcp.json that have 'always allow' configured.
