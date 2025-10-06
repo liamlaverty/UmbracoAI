@@ -15,11 +15,9 @@ globs: ["**/*"]
 - Structure content hierarchically and logically
 - Implement responsive, accessible frontend code
 - Use semantic HTML and modern CSS practices
-- Follow the project's content authoring guidelines for friendly, professional content
-- Create comprehensive, scalable solutions that can grow with the project needs
 - Always consider SEO, performance, and user experience in your implementations
-- Be creative with your front-end design, html and css. Come up with a theme and stick to it.
-- DO NOT try to log into the Umbraco backoffice manually with the browser.
+- Be creative with your front-end design, html and css. Come up with a theme and stick to it
+- DO NOT try to log into the Umbraco backoffice manually with the browser
 
 ## Running the website
 
