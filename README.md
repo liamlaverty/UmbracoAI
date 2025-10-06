@@ -79,3 +79,9 @@ Rules are found in `/.rulesync/rules`.
 These are the rules to help keep the AI Agent doing what it is supposed to. These rules are currently in their infancy and although they work most of the time when running the above commands, sometimes an Agent will get something wrong. In that case, the rules need to be adjusted.
 
 Pro tip: You can always ask the AI Agent to update the rules in a way that it won't get something wrong again :)
+
+## Next steps
+
+* Maybe this could be changed to a GitHub Template Repository?
+* Wonder if we can as a community come up with some great shared rulesets for Umbraco that can be confidently re-used?
+* Perhaps there can be some common Umbraco slash commands that can be re-used for majority of Umbraco tasks? Slash commands for many AI tools also support command parameters which could be leveraged for added flexibility.
