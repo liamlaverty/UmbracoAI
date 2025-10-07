@@ -216,7 +216,8 @@
         "get-template-query-settings",
         "get-template-ancestors",
         "get-template-children",
-        "get-template-root"
+        "get-template-root",
+        "create-media-multiple"
       ]
     },
     "git": {
