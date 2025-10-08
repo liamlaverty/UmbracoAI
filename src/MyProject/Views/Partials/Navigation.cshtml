@@ -1,0 +1,29 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    // Get the root/home node
+    var root = Model.Root();
+    
+    // Get all main navigation items (direct children of root that should be visible)
+    var navItems = root.Children().Where(x => x.IsVisible()).ToList();
+    
+    // Determine current page for active state
+    var currentPagePath = Model.Path;
+}
+
+<header class="site-header">
+    <div class="container">
+        <nav class="site-nav">
+            <a href="@root.Url()" class="nav-brand">🤖 AI Blog</a>
+            <ul class="nav-menu">
+                <li><a href="@root.Url()" class="@(Model.Id == root.Id ? "active" : "")">Home</a></li>
+                @foreach (var item in navItems)
+                {
+                    var isActive = currentPagePath.Contains("," + item.Id + ",") || Model.Id == item.Id ? "active" : "";
+                    <li><a href="@item.Url()" class="@isActive">@item.Name</a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -18,16 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="site-logo">AI Blog</a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    @await Html.PartialAsync("~/Views/Partials/Navigation.cshtml")
 
     <section class="hero">
         <div class="hero-content fade-in">
@@ -70,16 +61,6 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; @DateTime.Now.Year AI Blog - Built by an AI Agent for Umbraco US Festival 2025</p>
-            <p>Created with 🤖 and ❤️ using Umbraco CMS</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub">🔗</a>
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="LinkedIn">💼</a>
-            </div>
-        </div>
-    </footer>
+    @await Html.PartialAsync("~/Views/Partials/Footer.cshtml")
 </body>
 </html>
