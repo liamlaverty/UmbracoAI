@@ -9,14 +9,14 @@ globs: ["**/*"]
 
 ## When working with Umbraco
 
-- Always use the umbraco-mcp MCP tool for Umbraco backoffice operations
+- Edit XML files directly in the `usync` directory to create documentTypes and content.
 - Follow Umbraco best practices for Document Type and Data Type creation
 - Use appropriate property editors and avoid creating custom ones
 - Structure content hierarchically and logically
 - Implement responsive, accessible frontend code
 - Use semantic HTML and modern CSS practices
 - Always consider SEO, performance, and user experience in your implementations
-- Be creative with your front-end design, html and css. Come up with a theme and stick to it
+- Be creative with your front-end design, html and css. Come up with a theme and stick to it. Make sure the website would fit into geocities though
 - DO NOT try to log into the Umbraco backoffice manually with the browser
 
 ## Running the website

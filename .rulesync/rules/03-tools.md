@@ -13,9 +13,7 @@ globs: ["**/*"]
 
 ## Umbraco MCP
 
-* If the Umbraco MCP tool is not running, DO NOT attempt to modify Umbraco content.
-* The Umbraco MCP tool may not work if the website is not running. If you determine the website is not running, you can proceed to start it and try again.
-* If, the website is running and the MCP tool fails, notify the user, DO NOT attempt to complete ANY commands without it operating.
+* Not installed, do not attempt to install it
 
 ## Browser commands
 
