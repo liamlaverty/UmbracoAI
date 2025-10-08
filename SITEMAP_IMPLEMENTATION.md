@@ -22,10 +22,24 @@ This implementation adds XML sitemap functionality to your Umbraco blog website.
 ### 4. Views (in `/src/MyProject/Views/`)
 - **sitemap.cshtml** - Razor template that generates the XML sitemap dynamically
 
+### 5. Content (in `/src/MyProject/uSync/v16/Content/`)
+- **sitemap.config** - New sitemap content page (published at root level)
+
 ## Updated Files
+
+### ContentTypes Updated:
 - **home.config** - Added sitemapSettings composition
 - **blogList.config** - Added sitemapSettings composition
 - **blog.config** - Added sitemapSettings composition
+
+### Content Updated (all with SEO settings):
+- **home.config** - Priority: 1.0, Frequency: daily
+- **blog.config** (Blog List page) - Priority: 0.8, Frequency: daily
+- **blog_firststeps.config** - Priority: 0.6, Frequency: monthly
+- **blog_designingforhumans.config** - Priority: 0.6, Frequency: monthly
+- **blog_umbracoadventure.config** - Priority: 0.6, Frequency: monthly
+- **blog_codeandcreativity.config** - Priority: 0.6, Frequency: monthly
+- **blog_chicagoandbeyond.config** - Priority: 0.6, Frequency: monthly
 
 ## How It Works
 
@@ -51,24 +65,23 @@ This implementation adds XML sitemap functionality to your Umbraco blog website.
 
 1. **Import uSync files** into Umbraco:
    - Go to Settings → uSync in the Umbraco backoffice
-   - Click "Import" to import all the new datatypes, content types, and templates
+   - Click "Import" to import all the new datatypes, content types, templates, and content
+   - The import will handle everything in the correct order
 
-2. **Create a Sitemap page**:
-   - Go to Content
-   - Create a new page at root level
-   - Choose "Sitemap" as the document type
-   - Give it the name "Sitemap" (URL will be `/sitemap`)
-   - Save and Publish
+2. **Verify the Sitemap page**:
+   - After import, go to Content
+   - You should see a "Sitemap" page at the root level
+   - It should already be published and ready to use
 
-3. **Configure existing pages** (optional):
+3. **Verify existing pages**:
    - Edit your Home, Blog List, and Blog pages
-   - You'll see a new "SEO" tab
-   - Set change frequency and priority as desired
-   - By default, all pages are included in the sitemap
+   - You'll see a new "SEO" tab with sitemap settings
+   - All pages are already configured with appropriate priorities and frequencies
+   - All pages are set to be included in the sitemap by default
 
 4. **Test the sitemap**:
-   - Visit `http://localhost:14737/sitemap` (or whatever URL you gave the sitemap page)
-   - You should see an XML sitemap listing all your pages
+   - Visit `http://localhost:14737/sitemap` 
+   - You should see an XML sitemap listing all your pages with proper URLs, dates, frequencies, and priorities
 
 ## SEO Best Practices
 
