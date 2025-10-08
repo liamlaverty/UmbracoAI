@@ -1,0 +1,17 @@
+{
+  "name": "umbracoai",
+  "version": "1.0.0",
+  "description": "Umbraco management via MCP and AI Agents. Includes Rulesync and Playwright for automation.",
+  "main": "index.js",
+  "scripts": {
+    "rulesync:generate": "npx rulesync generate --targets '*' --features '*'"
+  },
+  "author": "liamlaverty",
+  "license": "MIT",
+  "dependencies": {
+    "rulesync": "latest"
+  },
+  "devDependencies": {
+    "playwright": "latest"
+  }
+}
