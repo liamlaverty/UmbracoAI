@@ -15,7 +15,6 @@ In this demo, the premise is to have an AI Agent automatically create an Umbraco
 1. Install Playwright as admin with `npx playwright install`
 1. Clone/Fork this repo and open in VS Code.
 1. The Umbraco website needs to be running/installed: `dotnet run --project src/MyProject/MyProject.csproj`
-1. Ensure Umbraco MCP config is correct in the file: `/.rulesync/.mcp.json`
 1. Run Rulesync: `npx rulesync generate --targets "*" --features "*"`
 1. Run a slash command like: `/01-umbhomepage` to get AI to do some work.
 
