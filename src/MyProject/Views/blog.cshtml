@@ -1,0 +1,76 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    var title = Model.Value<string>("title") ?? "Blog Post";
+    var subtitle = Model.Value<string>("subtitle");
+    var publishDate = Model.Value<DateTime?>("publishDate") ?? Model.CreateDate;
+    var tags = Model.Value<string[]>("tags") ?? Array.Empty<string>();
+    var headerImage = Model.Value<IPublishedContent>("headerImage");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@title</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav">
+                <a href="/" class="nav-brand">AI Blog</a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="@Model.Parent.Url()">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-post">
+        <article class="container">
+            @if (headerImage != null)
+            {
+                <div class="post-header-image">
+                    <img src="@headerImage.Url()" alt="@title" />
+                </div>
+            }
+            
+            <div class="post-header">
+                <div class="post-meta">
+                    <time datetime="@publishDate.ToString("yyyy-MM-dd")">
+                        @publishDate.ToString("MMMM dd, yyyy")
+                    </time>
+                    <a href="@Model.Parent.Url()" class="back-link">← Back to Blog</a>
+                </div>
+                <h1>@title</h1>
+                @if (!string.IsNullOrWhiteSpace(subtitle))
+                {
+                    <p class="post-subtitle">@subtitle</p>
+                }
+                @if (tags.Any())
+                {
+                    <div class="post-tags">
+                        @foreach (var tag in tags)
+                        {
+                            <span class="tag">@tag</span>
+                        }
+                    </div>
+                }
+            </div>
+
+            <div class="post-content">
+                @Model.Value("content")
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year AI Blog - Built by an AI Agent</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    var pageTitle = Model.Value<string>("pageTitle") ?? "Blog";
+    var introduction = Model.Value<string>("introduction");
+    var blogPosts = Model.Children().Where(x => x.IsVisible()).OrderByDescending(x => x.Value<DateTime?>("publishDate") ?? x.CreateDate);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@pageTitle</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav">
+                <a href="/" class="nav-brand">AI Blog</a>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="@Model.Url()" class="active">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-list-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>@pageTitle</h1>
+                @if (!string.IsNullOrWhiteSpace(introduction))
+                {
+                    <p class="page-intro">@introduction</p>
+                }
+            </div>
+
+            <div class="blog-grid">
+                @foreach (var post in blogPosts)
+                {
+                    var title = post.Value<string>("title");
+                    var subtitle = post.Value<string>("subtitle");
+                    var publishDate = post.Value<DateTime?>("publishDate") ?? post.CreateDate;
+                    var tags = post.Value<string[]>("tags") ?? Array.Empty<string>();
+                    var headerImage = post.Value<IPublishedContent>("headerImage");
+                    
+                    <article class="blog-card">
+                        @if (headerImage != null)
+                        {
+                            <div class="blog-card-image">
+                                <img src="@headerImage.Url()" alt="@title" />
+                            </div>
+                        }
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <time datetime="@publishDate.ToString("yyyy-MM-dd")">
+                                    @publishDate.ToString("MMMM dd, yyyy")
+                                </time>
+                            </div>
+                            <h2 class="blog-card-title">
+                                <a href="@post.Url()">@title</a>
+                            </h2>
+                            @if (!string.IsNullOrWhiteSpace(subtitle))
+                            {
+                                <p class="blog-card-subtitle">@subtitle</p>
+                            }
+                            @if (tags.Any())
+                            {
+                                <div class="blog-card-tags">
+                                    @foreach (var tag in tags)
+                                    {
+                                        <span class="tag">@tag</span>
+                                    }
+                                </div>
+                            }
+                            <a href="@post.Url()" class="read-more">Read more →</a>
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year AI Blog - Built by an AI Agent</p>
+        </div>
+    </footer>
+</body>
+</html>

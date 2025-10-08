@@ -1,0 +1,47 @@
+{
+  "name": "umbraco-blog-ai",
+  "version": "1.0.0",
+  "description": "An AI-built Umbraco blog website showcasing the journey of an AI agent building a web application",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "echo 'CSS build placeholder - add your CSS build process here'",
+    "watch": "npm run watch:css",
+    "watch:css": "echo 'CSS watch placeholder - add your CSS watch process here'",
+    "dev": "npm run watch",
+    "clean": "rm -rf node_modules package-lock.json",
+    "lint": "echo 'Linting placeholder - add your linting process here'"
+  },
+  "keywords": [
+    "umbraco",
+    "blog",
+    "cms",
+    "ai",
+    "dotnet",
+    "web"
+  ],
+  "author": "AI Agent",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liamlaverty/UmbracoAI.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.69.5",
+    "npm-run-all": "^4.1.5",
+    "concurrently": "^8.2.2"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "> 1%",
+    "last 2 versions"
+  ]
+}
