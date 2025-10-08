@@ -499,3 +499,10 @@ FodyWeavers.xsd
 !.rulesync/.mcp.json
 
 **/.clinerules/
+**/.codex/
+**/.cursor/
+**/.junie/
+**/.warp/
+**/.windsurf/
+
+warp.md
