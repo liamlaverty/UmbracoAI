@@ -1,0 +1,82 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    var pageTitle = Model.Value<string>("pageTitle") ?? "Welcome to My Geocities Blog!";
+    var welcomeMessage = Model.Value<string>("welcomeMessage") ?? "";
+    var heroImage = Model.Value<IPublishedContent>("heroImage");
+    var aboutSection = Model.Value<string>("aboutSection") ?? "";
+    var metaDescription = Model.Value<string>("metaDescription") ?? "A nostalgic Geocities-style blog";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@metaDescription">
+    <title>@pageTitle</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Classic Geocities Header -->
+        <header class="site-header">
+            <div class="header-banner">
+                <h1 class="site-title">@pageTitle</h1>
+                @if (!string.IsNullOrEmpty(welcomeMessage))
+                {
+                    <p class="welcome-message">@welcomeMessage</p>
+                }
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/">🏠 Home</a></li>
+                <li><a href="/blog/">📝 Blog</a></li>
+                <li><a href="#about">ℹ️ About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        @if (heroImage != null)
+        {
+            <div class="hero-section">
+                <img src="@heroImage.Url()" alt="@heroImage.Name" class="hero-image">
+            </div>
+        }
+
+        <!-- Main Content -->
+        <main class="main-content">
+            @if (!string.IsNullOrEmpty(aboutSection))
+            {
+                <section class="about-section" id="about">
+                    <div class="content-box">
+                        <h2>🌟 About This Site</h2>
+                        @Html.Raw(aboutSection)
+                    </div>
+                </section>
+            }
+
+            <!-- Latest Blog Posts Preview -->
+            <section class="latest-posts">
+                <div class="content-box">
+                    <h2>✨ Latest Blog Posts</h2>
+                    <p>Check out my latest thoughts and adventures!</p>
+                    <a href="/blog/" class="button">View All Posts →</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Classic Geocities Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>🌈 Welcome to my corner of the internet! 🌈</p>
+                <p class="visitor-counter">You are visitor #@(new Random().Next(1000, 9999))</p>
+                <p>&copy; @DateTime.Now.Year | Made with ❤️ at Umbraco US Festival 2025</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

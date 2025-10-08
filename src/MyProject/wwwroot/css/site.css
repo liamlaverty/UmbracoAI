@@ -1,0 +1,271 @@
+/* Geocities Blog CSS - Nostalgic 90s Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Arial', cursive, sans-serif;
+    background: linear-gradient(45deg, #ff6b9d 0%, #c06c84 25%, #6c5b7b 50%, #355c7d 75%, #2a3d66 100%);
+    background-attachment: fixed;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border: 5px ridge #ff00ff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styles */
+.site-header {
+    background: linear-gradient(to bottom, #ff1493, #ff69b4);
+    border-bottom: 3px solid #ff00ff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-banner {
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px double #ff1493;
+    padding: 15px;
+    margin: 10px;
+}
+
+.site-title {
+    color: #ff00ff;
+    font-size: 2.5em;
+    text-shadow: 3px 3px #00ffff, 6px 6px #ff1493;
+    animation: rainbow 3s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes rainbow {
+    0% { color: #ff00ff; }
+    25% { color: #00ffff; }
+    50% { color: #ffff00; }
+    75% { color: #00ff00; }
+    100% { color: #ff00ff; }
+}
+
+.welcome-message {
+    color: #333;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Navigation */
+.main-nav {
+    background: linear-gradient(to right, #ffff00, #00ffff, #ff00ff);
+    border-bottom: 3px solid #000;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-nav li {
+    display: inline-block;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: #fff;
+    text-decoration: none;
+    border: 2px outset #ff1493;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.main-nav a:hover {
+    background: #ff1493;
+    border-style: inset;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffff99, #99ccff);
+    border-bottom: 3px dashed #ff00ff;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px ridge #00ffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23fffacd" width="100" height="100"/><circle cx="10" cy="10" r="2" fill="%23ffb6c1"/><circle cx="90" cy="90" r="2" fill="%2398fb98"/></svg>');
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px double #ff00ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 0 rgba(255, 0, 255, 0.3);
+}
+
+.content-box h2 {
+    color: #ff1493;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color: #00ffff;
+    text-decoration-style: wavy;
+}
+
+.about-section,
+.latest-posts {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    color: #fff;
+    text-decoration: none;
+    border: 3px outset #ff1493;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #ff1493, #ff69b4);
+    border-style: inset;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(to top, #ff1493, #ff69b4);
+    border-top: 3px solid #ff00ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px double #ff1493;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.visitor-counter {
+    background: #000;
+    color: #00ff00;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 2px solid #00ff00;
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 1.8em;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-box {
+        padding: 15px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+/* Blog-specific styles */
+.blog-post {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px double #ff00ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 0 rgba(255, 0, 255, 0.3);
+}
+
+.blog-post h2 {
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.blog-post h2 a {
+    color: #ff1493;
+    text-decoration: none;
+}
+
+.blog-post h2 a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+.blog-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.blog-tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #00ffff;
+    color: #000;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #ff00ff;
+    margin: 15px 0;
+}
