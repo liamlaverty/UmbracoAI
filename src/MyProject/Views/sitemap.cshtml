@@ -1,0 +1,56 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Extensions
+@{
+    Layout = null;
+    Context.Response.ContentType = "application/xml";
+    
+    var siteUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
+    var rootNode = Model.Root();
+    
+    // Function to get all pages recursively
+    IEnumerable<IPublishedContent> GetAllPages(IPublishedContent node)
+    {
+        var pages = new List<IPublishedContent>();
+        
+        // Check if this page should be included in sitemap
+        var includeInSitemap = node.HasProperty("includeInSitemap") 
+            ? node.Value<bool>("includeInSitemap") 
+            : true; // Default to true if property doesn't exist
+        
+        if (includeInSitemap && node.TemplateId > 0)
+        {
+            pages.Add(node);
+        }
+        
+        // Add all child pages recursively
+        foreach (var child in node.Children.Where(x => x.IsVisible()))
+        {
+            pages.AddRange(GetAllPages(child));
+        }
+        
+        return pages;
+    }
+    
+    var allPages = GetAllPages(rootNode);
+}<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+@foreach (var page in allPages)
+{
+    var pageUrl = page.Url(mode: UrlMode.Absolute);
+    var lastMod = page.UpdateDate.ToString("yyyy-MM-dd");
+    var changeFreq = page.HasProperty("sitemapChangeFrequency") && page.HasValue("sitemapChangeFrequency") 
+        ? page.Value<string>("sitemapChangeFrequency") 
+        : "weekly";
+    var priority = page.HasProperty("sitemapPriority") && page.HasValue("sitemapPriority")
+        ? page.Value<string>("sitemapPriority")
+        : "0.5";
+    
+    <url>
+        <loc>@pageUrl</loc>
+        <lastmod>@lastMod</lastmod>
+        <changefreq>@changeFreq</changefreq>
+        <priority>@priority</priority>
+    </url>
+}
+</urlset>
